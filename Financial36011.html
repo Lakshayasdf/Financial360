@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 18 - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="base/jquery-ui.min.css" rel="stylesheet">
+<link href="font-awesome.min.css" rel="stylesheet">
+<link href="Untitled1.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-3.6.0.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("#ThemeableMenu1").menu(
+   {
+      icons: { submenu: 'ui-arrow' },
+      position: { using: setSubMenu }
+   });
+   function setSubMenu(position, elements)
+   {
+      var options = { of: elements.target.element };
+      if (elements.element.element.parent().parent().attr('id') === 'ThemeableMenu1')
+      {
+         options.my = 'left top';
+         options.at = 'left bottom';
+      }
+      else
+      {
+         options.my = 'left top';
+         options.at = 'right top';
+      }
+      elements.element.element.position(options);
+   }
+});
+</script>
+</head>
+<body>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_Image1" style="display:inline-block;width:100%;height:auto;z-index:0;">
+<img src="images/Financial 360 (3).png" id="Image1" alt="" width="199" height="81">
+</div>
+</div>
+<div class="col-2">
+<div id="wb_ThemeableMenu1" style="display:inline-block;width:100%;z-index:1;">
+<ul id="ThemeableMenu1">
+<li><div><a href="" target="_self">Stock&nbsp;Picks</a></div></li>
+<li><div><a href="" target="_self">Model-Based</a></div></li>
+<li><div><a href="" target="_self">Technical</a></div></li>
+<li><div><a href="" target="_self">Fundamental</a></div></li>
+<li><div><a href="" target="_self">PortfolioGenius</a></div></li>
+<li><div><a href="" target="_self">Wealth&nbsp;Talks</a></div></li>
+<li><div><a href="" target="_self">InvestConnect</a></div></li>
+<li><div><a href="" target="_self">Cognitive&nbsp;Wealth</a></div></li>
+<li><div><a href="" target="_self">Learn</a></div></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
